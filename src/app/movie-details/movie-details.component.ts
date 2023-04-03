@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
-  styleUrls: ['./movie-details.component.css']
+  styleUrls: ['./movie-details.component.css'],
 })
-export class MovieDetailsComponent {
-
-  parametar:any='';
-  constructor(private route:ActivatedRoute){}
-  ngOnInit():void{
-    this.parametar=this.route.snapshot.paramMap.get('id');
+export class MovieDetailsComponent implements OnInit {
+  parametar: any = '';
+  constructor(private router:Router,private route:ActivatedRoute) {}
+  ngOnInit(): void {
+    this.parametar = this.route.snapshot.paramMap.get('id');
+    
   }
 }

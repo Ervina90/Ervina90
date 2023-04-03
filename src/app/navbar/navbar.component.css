@@ -50,18 +50,17 @@ button {
 }
 
 .nav a:hover {
-  background-color:aqua;
+  background-color: aqua;
   border-radius: 30px;
 }
 
-.logo{
-
-  color: white;font-size: 2rem;
+.logo {
+  color: white;
+  font-size: 2rem;
   margin-left: 35%;
   margin-top: 20px;
   font-family: sans-serif;
-
 }
-span{
+span {
   color: aqua;
 }

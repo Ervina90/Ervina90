@@ -9,8 +9,6 @@ import { GlumciComponent } from './glumci/glumci.component';
 import { Router, RouterModule, Routes } from '@angular/router';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
-
-
 @NgModule({
   imports: [BrowserModule, AppRoutingModule],
   declarations: [

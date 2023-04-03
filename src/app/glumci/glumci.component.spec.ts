@@ -8,9 +8,8 @@ describe('GlumciComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GlumciComponent ]
-    })
-    .compileComponents();
+      declarations: [GlumciComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(GlumciComponent);
     component = fixture.componentInstance;

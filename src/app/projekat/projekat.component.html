@@ -1,0 +1,48 @@
+<div class="main">
+  <table class="table table-striped">
+    <thead>
+      <th>Naziv</th>
+      <th>Godina</th>
+      <th>Žanr</th>
+      <th>Trajanje</th>
+      <th>Rating</th>
+      <th>Opis</th>
+      <th>Poster</th>
+      <th>Action</th>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let film of Sadrzaj">
+        <td>{{ film.Naziv }}</td>
+        <td>{{ film.Godina }}</td>
+        <td>{{ film.Zanr }}</td>
+        <td>{{ film.Trajanje }}</td>
+
+        <td>{{ film.Rating }}</td>
+        <td>
+          <p *ngIf="film.showDescription">{{ film.Opis }}</p>
+        </td>
+        <button
+          type="button"
+          class="btn"
+          (click)="toggleDescriptionProduct(film.id)"
+        >
+          {{ film.showDescription ? "Hide" : "Show" }}
+        </button>
+
+        <td><img *ngIf="showOpis" [src]="film.Poster" width="100" /></td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-success"
+            [routerLink]="['/details', film.id]"
+          >Detail</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="buttn" type="button" (click)="toggleOpis()">
+    {{ showOpis == true ? "Sakrij opis" : "Prikazi opis" }}
+  </button>
+</div>

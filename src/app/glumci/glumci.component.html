@@ -1,0 +1,21 @@
+<div>
+
+    <table class="table table-striped">
+        <thead>
+          <th>FullName</th>
+          <th>BirthYear</th>
+         
+        </thead>
+    
+        <tbody>
+          <tr *ngFor="let film of actor">
+            <td>{{ film.FullName }}</td>
+            <td>{{ film.BirthYear }}</td>
+
+            
+    
+            <td><img [src]="film.ImgUrl" width="70" /></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
